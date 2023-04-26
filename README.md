@@ -2,7 +2,7 @@ Instructions:
 
 - Open your desired minecraft version (from the "version" folder) .jar file with a zip program;
 - Extract the "recipes" folder from inside "data\minecraft\advancements\" into the corrisponding datapack folder;
-- Open the terminal from the datapack folder (where the python script is located), open a terminal and run the script with ```python convert_recipes.py``` (pyhton3 if you are on linux).
+- Open the terminal from the datapack folder (where the python script is located), open a terminal and run the script with ```python convert_recipes.py``` (python3 if you are on Linux).
 
 Note: make sure use the terminal to run the script from the correct directory, if you have a subfolder named "recipes" in the location you are executing the script from (for example your home directory if you open the script directly with VScode and use Code Runner), every .json file present there will be overwitten!
 
