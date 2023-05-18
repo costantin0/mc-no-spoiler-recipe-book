@@ -8,7 +8,7 @@ Note: make sure use the terminal to run the script from the correct directory, i
 
 The 1.19.4 script will change every item recipe to this:
 ```
-   {
+{
    "parent":"minecraft:recipes/root",
    "criteria":{
       "was_crafted":{
