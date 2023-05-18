@@ -8,29 +8,30 @@ Note: make sure use the terminal to run the script from the correct directory, i
 
 The 1.19.4 script will change every item recipe to this:
 ```
-"parent":"minecraft:recipes/root",
-"criteria":{
-   "was_crafted":{
-      "conditions":{
-         "items":[
-            {
-               "items":[
-                  "minecraft:item_name"
-               ]
-            }
-         ]
+   {
+   "parent":"minecraft:recipes/root",
+   "criteria":{
+      "was_crafted":{
+         "conditions":{
+            "items":[
+               {
+                  "items":[
+                     "minecraft:item_name"
+                  ]
+               }
+            ]
+         }
       }
-   }
-},
-"requirements":[
-   [
-      "was_crafted"
-   ]
-],
-"rewards":{
-   "recipes":[
-      "minecraft:item_name"
-   ]
+   },
+   "requirements":[
+      [
+         "was_crafted"
+      ]
+   ],
+   "rewards":{
+      "recipes":[
+         "minecraft:item_name"
+      ]
 }
 ```
 The 23w16a script will change them to this:
