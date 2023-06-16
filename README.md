@@ -6,7 +6,7 @@ Instructions:
 
 Note: make sure use the terminal to run the script from the correct directory, if you have a subfolder named ```recipes``` in the location you are executing the script from (for example your home directory if you open the script directly with VScode and use Code Runner), every .json file present there will be overwitten!
 
-The 1.19.4 script will change every item recipe to this:
+The 1.19.4 script will change every item recipe advancement to this:
 ```
 {
     "parent":"minecraft:recipes/root",
