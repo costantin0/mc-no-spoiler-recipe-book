@@ -6,7 +6,7 @@ for root, dirs, files in os.walk("./recipes"):
         if file.endswith(".json"):
             filepath = os.path.join(root, file)
             print(filepath)
-            if file.startswith("root"):
+            if file.startswith("root.json"):
                 os.remove(filepath)
             else:
                 with open(filepath, 'w') as f:
