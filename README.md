@@ -4,18 +4,18 @@ Instructions:
 - Extract the "recipes" folder from inside ```data\minecraft\advancements``` into the corrisponding datapack folder (where the python script is located);
 - Open the terminal from inside the same folder and run the script with ```python convert_recipes.py``` (python3 if you are on Linux).
 
-Note: make sure use the terminal to run the script from the correct directory, if you have a subfolder named ```recipes``` in the location you are executing the script from (for example your home directory if you open the script directly with VScode and use Code Runner), every .json file present there will be overwitten!
+Note: make sure use the terminal to run the script from the correct directory, if (for some reason) you have a subfolder named ```recipes``` in the location you are running the script from (for example your home directory if you use VSCode with Code Runner), every JSON file present there will be overwritten!
 
 The 1.19.4 script will change every item recipe advancement to this:
-```
+```json
 {
-    "parent":"minecraft:recipes/root",
-    "criteria":{
-        "was_crafted":{
-            "conditions":{
-                "items":[
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "was_crafted": {
+            "conditions": {
+                "items": [
                     {
-                        "items":[
+                        "items": [
                             "minecraft:item_name"
                         ]
                     }
@@ -23,20 +23,20 @@ The 1.19.4 script will change every item recipe advancement to this:
             }
         }
     },
-    "requirements":[
+    "requirements": [
         [
             "was_crafted"
         ]
     ],
-    "rewards":{
-        "recipes":[
+    "rewards": {
+        "recipes": [
             "minecraft:item_name"
         ]
     }
 }
 ```
 The 23w16a script will change them to this:
-```
+```json
 {
     "parent": "minecraft:recipes/root",
     "criteria": {
