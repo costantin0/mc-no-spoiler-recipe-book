@@ -35,7 +35,7 @@ The 1.19.4 script will change every item recipe advancement to this:
     }
 }
 ```
-The 23w16a script will change them to this:
+The 1.20 and above scripts will change them to this:
 ```json
 {
     "parent": "minecraft:recipes/root",
@@ -60,4 +60,5 @@ The 23w16a script will change them to this:
 }
 ```
 
-And that's it, the datapack is ready! The 23w16a version should work with future snapshots and releases if they don't change recipe related stuff in the future, and the 1.19.4 version should also work on older versions. You can change the ```pack_format``` version from the ```pack.mcmeta``` file if you don't want to get a warning when selecting the datapack.
+And that's it, the datapack is ready! The 1.21 version should work with future snapshots and releases if they don't change recipe related stuff in the future, and the 1.19.4 version should also work on older versions.
+You can change the ```pack_format``` version from the ```pack.mcmeta``` file if you don't want to get a warning when selecting the datapack.
