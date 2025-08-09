@@ -1,6 +1,7 @@
 import os, json
 
-# Snapshot 24w21a (1.21) renamed the "advancements" folder to "advancement"
+# This variant unlocks the recipe when the players obtains the item itself
+# Suggested by @StrannikNyyan in https://github.com/costantin0/mc-no-spoiler-recipe-book/discussions/1
 
 print(os.getcwd())
 for root, dirs, files in os.walk("./recipes"):
@@ -15,21 +16,23 @@ for root, dirs, files in os.walk("./recipes"):
                     json_string = json.dumps({
                     "parent": "minecraft:recipes/root",
                     "criteria": {
-                        "was_crafted": {
-                            "trigger": "minecraft:recipe_crafted",
+                        "item_obtained": {
+                            "trigger": "minecraft:inventory_changed",
                             "conditions": {
-                            "recipe_id": "minecraft:{}".format(file[:len(file)-5])
+                                "items": [
+                                    "minecraft:{}".format(file[:len(file)-5])
+                                ]
                             }
                         }
-                        },
+                    },
                     "requirements": [
                         [
-                        "was_crafted"
+                        "item_obtained"
                         ]
                     ],
                     "rewards": {
                         "recipes": [
-                        "minecraft:{}".format(file[:len(file)-5])
+                            "minecraft:{}".format(file[:len(file)-5])
                         ]
                     }
                     }, indent=4)

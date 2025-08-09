@@ -1,3 +1,5 @@
+Branch that implements [@StrannikNyyan](https://github.com/StrannikNyyan)'s suggestion from [this discussion](https://github.com/costantin0/mc-no-spoiler-recipe-book/discussions/1).
+
 Instructions:
 
 - Open your desired minecraft version (from the "version" folder) .jar file with a zip program;
@@ -6,50 +8,23 @@ Instructions:
 
 Note: make sure use the terminal to run the script from the correct directory, if (for some reason) you have a subfolder named ```recipes``` in the location you are running the script from (for example your home directory if you use VSCode with Code Runner), every JSON file present there will be overwritten!
 
-The 1.19.4 script will change every item recipe advancement to this:
+The script will change every item recipe advancement to this:
 ```json
 {
     "parent": "minecraft:recipes/root",
     "criteria": {
-        "was_crafted": {
+        "item_obtained": {
+            "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
-                    {
-                        "items": [
-                            "minecraft:item_name"
-                        ]
-                    }
+                    "minecraft:item_name"
                 ]
             }
         }
     },
     "requirements": [
         [
-            "was_crafted"
-        ]
-    ],
-    "rewards": {
-        "recipes": [
-            "minecraft:item_name"
-        ]
-    }
-}
-```
-The 1.20 and above scripts will change them to this:
-```json
-{
-    "parent": "minecraft:recipes/root",
-    "criteria": {
-        "was_crafted": {
-            "trigger": "minecraft:recipe_crafted",
-            "conditions": {
-                "recipe_id": "minecraft:item_name"
-            }
-        }
-    },
-    "requirements": [
-        [
-            "was_crafted"
+            "item_obtained"
         ]
     ],
     "rewards": {
@@ -60,5 +35,5 @@ The 1.20 and above scripts will change them to this:
 }
 ```
 
-And that's it, the datapack is ready! The 1.21 version should work with future snapshots and releases if they don't change recipe related stuff in the future, and the 1.19.4 version should also work on older versions.
+And that's it, the datapack is ready! It should work with future snapshots and releases if they don't change recipe related stuff in the future.
 You can change the ```pack_format``` version from the ```pack.mcmeta``` file if you don't want to get a warning when selecting the datapack.

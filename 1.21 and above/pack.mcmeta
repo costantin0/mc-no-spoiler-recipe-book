@@ -1,6 +1,6 @@
 {
     "pack": {
-        "description": "Unlock recipe only after crafting the item",
+        "description": "Unlock recipe only after obtaining the item",
         "pack_format": 48
     }
 }
