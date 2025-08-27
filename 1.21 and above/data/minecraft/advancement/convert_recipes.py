@@ -20,7 +20,11 @@ for root, dirs, files in os.walk("./recipes"):
                             "trigger": "minecraft:inventory_changed",
                             "conditions": {
                                 "items": [
-                                    "minecraft:{}".format(file[:len(file)-5])
+                                    {
+                                        "items": [
+                                            "minecraft:{}".format(file[:len(file)-5])
+                                        ]
+                                    }
                                 ]
                             }
                         }
