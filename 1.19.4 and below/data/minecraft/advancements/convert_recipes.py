@@ -14,17 +14,12 @@ for root, dirs, files in os.walk("./recipes"):
                     "parent": "minecraft:recipes/root",
                     "criteria": {
                         "was_crafted": {
+                          "trigger": "minecraft:recipe_unlocked",
                           "conditions": {
-                            "items": [
-                              {
-                                "items": [
-                                  "minecraft:{}".format(file[:len(file)-5])
-                                ]
-                              }
-                            ]
+                            "recipe": "minecraft:{}".format(file[:len(file)-5])
                           }
-                          }
-                        },
+                        }
+                    },
                     "requirements": [
                         [
                         "was_crafted"
